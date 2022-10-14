@@ -18,7 +18,7 @@ const Login = () => {
         </div>
 
         <div className='login-button'>
-            <button className='login-btn'><a href='mida-mobile-feat-login' target="_self">Login</a></button>
+            <button className='login-btn'><a href='https://mida-dev-be.herokuapp.com/' target="_self">Login</a></button>
         </div>
     </div>
   )
