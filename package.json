@@ -15,7 +15,6 @@
     "web-vitals": "^2.1.4"
   },
   "proxy": "https://mida-test-owec.vercel.app",
-"homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
