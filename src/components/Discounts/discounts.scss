@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     padding: 0px 30px; 
-    position: relative;
+    // position: relative;
     .logo{
         font-weight: 500 ;
         font-size: 17px;
@@ -27,7 +27,7 @@
         }
     }
     .all-discounts{
-        overflow: scroll;
+        overflow-y: scroll;
         display: flex;
         flex-direction: column;
         margin-top: 10px;
@@ -39,6 +39,15 @@
             justify-content: space-between;
             align-items: center;
             padding: 30px 0;
+            .scan-completed{
+                width: 67%;
+                height: 42px;
+                background-color: black;
+                color: white;
+                border-radius: 5px;
+                border-width: 0px;
+                font-size: 17px;
+            }
             .expiry-time{
                 font-size: 10px;
                 color: grey;
@@ -125,6 +134,7 @@
                         img{
                             width: 16px;
                             height: 16px;
+                            border-radius: 7px;
                         }
                         .expiry-time{
                             text-align: center;
@@ -137,6 +147,9 @@
                 }
                 
                 
+            }
+            .discount-used{
+                opacity: 0.2;
             }
         }
         
@@ -199,7 +212,83 @@
         display: none;  /* Safari and Chrome */
     }
     
+    
 
+}
+.discounts-main{
+    position: relative;
+    height: 100vh;
+    .success-message{
+        width: 60%;
+        max-width: 350px;
+        border:5px solid rgb(213, 213, 213);
+        border-radius: 20px;
+        padding: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content:space-between;
+        margin: 0 auto;
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        background-color: white;
+
+        .close-icon{
+            width: 100%;
+            text-align: end;
+            img{
+                width: 15px;
+                height: 15px;
+            }
+        }
+        .success-data{
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+            .sucess-header{
+                font-weight: 700;
+                width: 80%;
+                font-size: 17px;
+                text-align: center;
+            }
+            .success-body{
+                width: 80%;
+                margin-top: 15px;
+                font-weight: 300;
+                font-size: 15px;
+                text-align: center;
+            }
+            .success-footer{
+                text-align: center;
+                width: 80%;
+                font-weight: 500;
+            }
+            .close-qr{
+                
+                margin-top: 25px;
+                width: 70%;
+                height: 50px;
+                background-color: black;
+    
+                    color: white;
+                    border-radius: 5px;
+                    border-width: 0px;
+                    font-size: 17px;
+            }
+
+        }
+        
+       
+       
+    }
+}
+.discounts-fade{
+    opacity: 0.4;
+    background-color: rgb(123, 122, 122);
 }
 
 

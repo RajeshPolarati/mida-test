@@ -5,12 +5,16 @@ import adidas from "../../assets/images/adidas.png";
 
 const SingleDiscount = ({zkAppAdress,employeeHash,merklePath,code, showQr,setShowQr,setQrData}) => {
   const [isExpanded, setExpanded] = useState(false);  
-  useEffect(()=>{
-    console.log("calling");
-  })
+  const[isUsed,setIsUsed] = useState(false)
   return (
-    <div className="discount-main" style={{display:`${showQr? "none" : "block"}`}} >
-          <div className="discount" onClick={()=>{setExpanded(true)}} style={{display:`${isExpanded? "none" : "flex"}`}}>
+    <div className="discount-main" style={{display:`${showQr? "none" : "block"}`,minHeight:`${isExpanded?"460px":""}`}} >
+          <div className={`discount ${isUsed?'discount-used':''}`} 
+          onClick={()=>{
+            if(!isUsed){
+              setExpanded(true)
+            }
+          }}
+          style={{display:`${isExpanded? "none" : "flex"}`}}>
             <div className="brand-logo">
               <img src={adidas} />
             </div>
@@ -52,7 +56,7 @@ const SingleDiscount = ({zkAppAdress,employeeHash,merklePath,code, showQr,setSho
                 />
                 </div>
                 <div className="options">
-                    <div className="expand-qr"><img src={link} onClick={()=>{setShowQr(true);setQrData(`${zkAppAdress} ${employeeHash} ${JSON.stringify(merklePath)} ${code}}`) }}/></div>
+                    <div className="expand-qr"><img src={link} onClick={()=>{setIsUsed(true);setExpanded(false);setShowQr(true);setQrData(`${zkAppAdress} ${employeeHash} ${JSON.stringify(merklePath)} ${code}}`) }}/></div>
                     <div className="expiry-time">Expires in 15 days</div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Discounts from './components/Discounts/Discounts';
-import Login from './components/Login/Login';
+import Discounts from './components/Discounts/discounts';
+import Login from './components/Login/login';
 
 function App() {
   return (
